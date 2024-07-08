@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Shopping Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700"
+    />
+    <link rel="stylesheet" href="./styles/shopping_cart2.css" />
+  </head>
+  <body>
+    <header class="main-container">
+      <nav class="container-nav">
+        <button class="navbar-menu-btn" data-navbar-toggle-btn>
+          <img src="./assets/menu (4).png" alt="menu" class="menu-outline" />
+        </button>
+
+        <section class="navbar-left">
+          <img
+            src="./assets/Max_SPORT__1_-removebg-preview.png"
+            alt="Logo"
+            class="Logo"
+          />
+        </section>
+        <section class="navbar-center" data-navbar>
+          <ul>
+            <li>
+              <a href="index.html#productinit">OFERTA</a>
+            </li>
+            <li>
+              <a href="index.html#colaboradorinit">COLABORADORES</a>
+            </li>
+            <li>
+              <a href="index.html#Coleccioninit">COLECCIONES</a>
+            </li>
+            <li>
+              <a href="#footerinit">ACERCA DE NOSOTROS</a>
+            </li>
+          </ul>
+        </section>
+
+        <div class="navbar-right">
+          <a href="shopping_cart2.html?">
+            <ul>
+              <li class="navbar-shopping-cart">
+                <img src="./assets/bolsa de compra3.svg" alt="shopping_cart" />
+                <div>0</div>
+              </li>
+            </ul>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="cart-container">
+      <h2 class="Titulo_cart">Carro de compras</h2>
+      <p class="mensaje">Los articulos de tu carrito no están reservados.</p>
+      <p class="mensaje1">Finaliza tu compra para asegurarlos.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Artículos</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item-details">
+              <img src="./assets/image-55.png" alt="Camisa" />
+              <section>
+                <h3 class="name_product_cart">Camisa</h3>
+                <div class="Container_Codig">
+                  <p class="title_CODIGO">CODIGO#</p>
+                  <span class="Codigo_product">8675309JNY</span>
+                </div>
+              </section>
+            </td>
+            <td class="Precio">$524.950,00</td>
+            <td class="Container_cantidad-cart">
+              <div class="quantity-control">
+                <button class="minus-btn">-</button>
+                <input type="number" value="1" min="1" />
+                <button class="plus-btn">+</button>
+              </div>
+              <div class="cotainer_Existencia">
+                <p class="P_existencias">Existencias:</p>
+                <span class="number_existencia"> 6</span>
+              </div>
+            </td>
+            <td class="subtotal-del-pedido">$524.950,00</td>
+          </tr>
+
+          <tr>
+            <td class="item-details">
+              <img src="./assets/image-56-op2.png" alt="Camisa" />
+              <section>
+                <h3 class="name_product_cart">Jogger</h3>
+                <div class="Container_Codig">
+                  <p class="title_CODIGO">Codigo#</p>
+                  <span class="Codigo_product">902109090BHS</span>
+                </div>
+              </section>
+            </td>
+            <td class="Precio">$132.000,00</td>
+            <td class="Container_cantidad-cart">
+              <div class="quantity-control">
+                <button class="minus-btn">-</button>
+                <input type="number" value="1" min="1" />
+                <button class="plus-btn">+</button>
+              </div>
+              <div class="cotainer_Existencia">
+                <p class="P_existencias">Existencias:</p>
+                <span class="number_existencia"> 4</span>
+              </div>
+            </td>
+            <td class="subtotal-del-pedido">$132.000,00</td>
+          </tr>
+
+          <tr>
+            <td class="item-details">
+              <img src="./assets/image-57.png" alt="Camisa" />
+              <section>
+                <h3 class="name_product_cart">Esqueleto</h3>
+                <div class="Container_Codig">
+                  <p class="title_CODIGO">CODIGO#</p>
+                  <span class="Codigo_product">1324651DAO</span>
+                </div>
+                <div class="Container-Talla">
+                  <p class="title_Talla">Talla</p>
+                  <span class="Numero_Talla"> M</span>
+                </div>
+              </section>
+            </td>
+            <td class="Precio">$138.000,00</td>
+            <td class="Container_cantidad-cart">
+              <div class="quantity-control">
+                <button class="minus-btn" id="desincrementar">-</button>
+                <input type="number" value="1" min="1" id="cantidad" />
+                <button class="plus-btn" id="incrementar">+</button>
+              </div>
+              <div class="cotainer_Existencia">
+                <p class="P_existencias">EXISTENCIAS:</p>
+                <span class="number_existencia"> 6</span>
+              </div>
+            </td>
+            <td class="subtotal-del-pedido">138.000,00</td>
+          </tr>
+
+          <!-- Agregar más filas para los otros productos -->
+        </tbody>
+      </table>
+      <section class="cart-footer">
+        <div class="totals">
+          <p>Subtotal del Pedido <span id="subtotal">$794.950,00</span></p>
+          <p>Impuestos <span id="taxes">$19%</span></p>
+          <p>Envío <span id="shipping">$8.000</span></p>
+          <p>Pago total <span id="total">$953.990,00</span></p>
+        </div>
+        <!-- <button class="checkout-btn">REALIZAR PAGO</button> -->
+        <!-- <button class="Btn">
+          Realizar Pago
+          <svg class="svgIcon" viewBox="0 0 576 512">
+            <path
+              d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"
+            ></path>
+          </svg>
+        </button> -->
+        <!-- Contenedor para el botón de PayPal -->
+        <div id="paypal-button-container"></div>
+      </section>
+    </section>
+    <script src="./Js/shopping_cart2.js" defer></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AcYBih_niuNqf8gVrPeAY6hwwpt8q9-rr-UdDqbsBxgVP_OeWySVXWzycpnSPJs93w8duRZ5Uxo80EYH&currency=MXN"></script>
+    <script>
+      "use strict";
+
+      /**
+       * navbar variables
+       */
+      const menuToggleBtn = document.querySelector("[data-navbar-toggle-btn]");
+      const navbar = document.querySelector("[data-navbar]");
+
+      /**
+       * element toggle function
+       */
+
+      const elemToggleFunc = function (elem) {
+        elem.classList.toggle("active");
+      };
+
+      menuToggleBtn.addEventListener("click", function () {
+        elemToggleFunc(navbar);
+      });
+    </script>
+  </body>
+</html>
